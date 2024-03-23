@@ -22,11 +22,7 @@ router.post("/addtask", async (req, res) => {
     }
 })
 
-<<<<<<< HEAD
-//Get all Tasks
-=======
 //Get all Tasks 
->>>>>>> 5b0b226 (Second Commit)
 router.get("/getalltasks/:id", async (req, res) => {
     try {
         const list = await List.find({ user: req.params.id }).sort({ createdAt: -1 });
@@ -47,21 +43,15 @@ router.put("/updatetask/:id", async (req, res) => {
     try {
         const { title, body } = req.body;
         const list = await List.findByIdAndUpdate(req.params.id, { title, body });
-<<<<<<< HEAD
-        list.save().then(() => res.status(200).json({ message: "Task Updated." }));
-=======
         list.save().then(() => 
             res.status(200).json({ message: "Task Updated." })
         );
->>>>>>> 5b0b226 (Second Commit)
     } catch (error) {
         console.log(error);
         res.status(200).json({ message: "Task Not Updated." })
     }
 })
 
-<<<<<<< HEAD
-=======
 //Update Checkbox 
 router.put("/updatecheckbox/:id", async (req, res) => {
     try {
@@ -75,7 +65,6 @@ router.put("/updatecheckbox/:id", async (req, res) => {
     }
 })
 
->>>>>>> 5b0b226 (Second Commit)
 //Delete Task
 router.delete("/deltask/:id", async (req, res) => {
     try {

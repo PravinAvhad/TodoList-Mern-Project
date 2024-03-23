@@ -30,7 +30,7 @@ const Todo = () => {
         else {
             if (id) {
                 await axios
-                    .post(`http://localhost:3000/api/v2/addtask`, { title: inputs.title, body: inputs.body, id: id })
+                    .post(`${window.location.origin}/api/v2/addtask`, { title: inputs.title, body: inputs.body, id: id })
                     .then((res) => {
                         setinputs({ title: "", body: "" });
                         toast.success(`Your ${inputs.title} is Added.`);
@@ -45,7 +45,7 @@ const Todo = () => {
 
     const del = async (cardid) => {
         if (cardid) {
-            await axios.delete(`http://localhost:3000/api/v2/deltask/${cardid}`, { data: { id: id }, })
+            await axios.delete(`${window.location.origin}/api/v2/deltask/${cardid}`, { data: { id: id }, })
                 .then((res) => {
                     toast.success(`Your Task is Deleted.`);
                 });
@@ -65,7 +65,7 @@ const Todo = () => {
         if (id) {
             const fetch3 = async () => {
                 await axios
-                    .get(`http://localhost:3000/api/v2/getalltasks/${id}`)
+                    .get(`${window.location.origin}/api/v2/getalltasks/${id}`)
                     .then((res) => {
                         setArray(res.data.list);
                         setFilter(res.data.list);

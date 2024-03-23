@@ -21,7 +21,7 @@ const Signin = () => {
     const verify = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:3000/api/v1/signin`, inputs);
+            const response = await axios.post(`${window.location.origin}/api/v1/signin`, inputs);
             if (response.data.message === "Please Sign Up First" || response.data.message === "Password is not correct.") {
                 alert(response.data.message);
             }

@@ -16,7 +16,7 @@ const Update = ({ display, updatevalue }) => {
   }, [updatevalue])
 
   const updateinputs = async () => {
-    await axios.put(`http://localhost:3000/api/v2/updatetask/${updatevalue._id}`, inputs)
+    await axios.put(`${window.location.origin}/api/v2/updatetask/${updatevalue._id}`, inputs)
       .then((res) => {
         toast.success(res.data.message);
         // console.log(updatevalue._id);
