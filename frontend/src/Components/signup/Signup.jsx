@@ -19,11 +19,7 @@ const Signup = () => {
     }
     const submit = async (e) => {
         e.preventDefault();
-<<<<<<< HEAD
-        await axios.post(`https://mern-todo-list-project.vercel.app/api/v1/register`, inputs)
-=======
         await axios.post(`http://localhost:3000/api/v1/register`, inputs)
->>>>>>> 5b0b226 (Second Commit)
             .then((res) => {
                 if (res.data.message === "User Already Exists.") {
                     alert(res.data.message);
@@ -37,16 +33,10 @@ const Signup = () => {
                     });
                     history("/signin");
                 }
-<<<<<<< HEAD
-
-            });
-    }
-=======
             });
     }
 
 
->>>>>>> 5b0b226 (Second Commit)
     return (
         <div className='signup'>
             <div className="container">

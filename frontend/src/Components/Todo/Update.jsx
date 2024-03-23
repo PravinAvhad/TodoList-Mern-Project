@@ -16,16 +16,10 @@ const Update = ({ display, updatevalue }) => {
   }, [updatevalue])
 
   const updateinputs = async () => {
-<<<<<<< HEAD
-    await axios.put(`https://mern-todo-list-project.vercel.app/api/v2/updatetask/${updatevalue._id}`, inputs)
-      .then((res) => {
-        toast.success(res.data.message);
-=======
     await axios.put(`http://localhost:3000/api/v2/updatetask/${updatevalue._id}`, inputs)
       .then((res) => {
         toast.success(res.data.message);
         // console.log(updatevalue._id);
->>>>>>> 5b0b226 (Second Commit)
         close();
       })
   }

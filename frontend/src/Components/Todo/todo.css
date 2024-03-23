@@ -16,8 +16,6 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-<<<<<<< HEAD
-=======
 .displaytasksbtns{
     margin: 0rem 2rem;
 }
@@ -33,15 +31,10 @@
     text-align: center;
     text-wrap: wrap;
 }
->>>>>>> 5b0b226 (Second Commit)
 #textarea {
     display: none;
     font-size: 1.2rem;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 5b0b226 (Second Commit)
 .todo-card {
     border: 2px solid black;
     border-radius: 5px;
@@ -52,14 +45,10 @@
     text-align: justify;
     text-justify: inter-word;
 }
-<<<<<<< HEAD
-
-=======
 .todo-card-checkbox{
     width: 1.3rem;
     height: 1.3rem;
 }
->>>>>>> 5b0b226 (Second Commit)
 .card-icons {
     font-size: 1.4rem;
 }
@@ -98,8 +87,6 @@
 
 .updatepage {
     background-color: skyblue;
-<<<<<<< HEAD
-=======
 }
 @media screen and (max-width: 460px) {
     .displaytasksbtns{
@@ -108,5 +95,4 @@
     .displaytasksbtns button{
         font-size: 1rem;
     }
->>>>>>> 5b0b226 (Second Commit)
 }

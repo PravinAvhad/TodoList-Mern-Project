@@ -21,22 +21,14 @@ const Signin = () => {
     const verify = async (e) => {
         e.preventDefault();
         try {
-<<<<<<< HEAD
-            const response = await axios.post(`https://mern-todo-list-project.vercel.app/api/v1/signin`, inputs);
-=======
             const response = await axios.post(`http://localhost:3000/api/v1/signin`, inputs);
->>>>>>> 5b0b226 (Second Commit)
             if (response.data.message === "Please Sign Up First" || response.data.message === "Password is not correct.") {
                 alert(response.data.message);
             }
             else {
                 sessionStorage.setItem("id", response.data.others._id);
                 dispatch(authActions.login());
-<<<<<<< HEAD
-                history("/todo");
-=======
                 history("/");
->>>>>>> 5b0b226 (Second Commit)
             }
         } catch (error) {
             console.error("An Error Occurred: ", error);
