@@ -12,7 +12,6 @@ const conn = async (req, res) => {
                 console.log("Mongoose is Connected");
             });
     } catch (error) {
-        // console.log(error);
         res.status(200).json({ message: "Not Connected" });
     }
 }
